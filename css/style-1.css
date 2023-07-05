@@ -319,6 +319,10 @@ ul {
 }
 
 .landing .container .main-cont {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   position: relative;
   margin-top: -20%;
 }
@@ -514,7 +518,7 @@ ul {
 }
 
 /*  end of private */
-/*  start of  */
+
 /* start-product */
 .products {
   position: relative;
@@ -621,15 +625,51 @@ svg {
 /* end-product */
 
 /* end  foooter  */
-.row{
-	display: flex;
-	flex-wrap: wrap;
-}
 
 .footer{
   background-color: rgb(30, 39, 39);
-    padding: 70px 0;
+  padding: 70px 0;
+  padding-bottom: 0;
+  overflow: hidden;
 }
+
+/* flexs and grid  */
+.footer .container {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-template-rows: repeat(0);
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+
+.footer .container .foot-up-links {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  margin-left:-50%;
+}
+
+
+.footer .container .foot-up-links h1 {
+  color: #ffcaa6;
+}
+
+.footer .container .foot-up-links ul li {
+  margin-bottom: 10px;
+  color: #ddd;
+  cursor: pointer;
+  transition: all  1s ease-out;
+}
+
+.footer .container .foot-up-links ul li:hover {
+  padding-left: 10px;
+  color: #ffcaa6;
+
+}
+/* flexs and grid  */
+
 .footer-col{
    width: 25%;
    padding: 0 15px;
@@ -687,6 +727,145 @@ svg {
 	color: #24262b;
 	background-color: #ffcaa6;
 }
+
+/* footer with forms divs 3 */
+.foot-cont {
+  padding-left: 0px;
+}
+.forms {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  position: relative;
+  color: white;
+}
+
+.container .label {
+  font-size: 15px;
+  padding-left: 10px;
+  position: absolute;
+  top: 13px;
+  transition: 0.3s;
+  pointer-events: none;
+}
+
+.input {
+  width: 200px;
+  height: 45px;
+  border: none;
+  outline: none;
+  padding: 0px 7px;
+  border-radius: 6px;
+  color: #fff;
+  font-size: 15px;
+  background-color: transparent;
+  box-shadow: 3px 3px 10px rgba(0,0,0,1),
+  -1px -1px 6px rgba(255, 255, 255, 0.4);
+}
+
+.input:focus {
+  border: 2px solid transparent;
+  color: #fff;
+  box-shadow: 3px 3px 10px rgba(0,0,0,1),
+  -1px -1px 6px rgba(255, 255, 255, 0.4),
+  inset 3px 3px 10px rgba(0,0,0,1),
+  inset -1px -1px 6px rgba(255, 255, 255, 0.4);
+}
+
+.container .input:valid ~ .label,
+.container .input:focus ~ .label {
+  transition: 0.3s;
+  padding-left: 2px;
+  transform: translateY(-35px);
+}
+
+.container .input:valid,
+.container .input:focus {
+  box-shadow: 3px 3px 10px rgba(0,0,0,1),
+  -1px -1px 6px rgba(255, 255, 255, 0.4),
+  inset 3px 3px 10px rgba(0,0,0,1),
+  inset -1px -1px 6px rgba(255, 255, 255, 0.4);
+}
+
+
+/* social ooter  */
+
+.social-footer {
+  width: fit-content;
+  height: fit-content;
+  background-color: rgb(238, 238, 238);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.055);
+  padding: 10px;
+  margin-top: 20px;
+  border-radius: 10px;
+}
+
+/* for all social containers*/
+.socialContainer {
+  width:40px;
+  height:40px;
+  border-radius: 50%;
+  background-color: rgb(44, 44, 44);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition-duration: .3s;
+}
+/* instagram*/
+.containerOne:hover {
+  background-color: #d62976;
+  transition-duration: .3s;
+}
+/* twitter*/
+.containerTwo:hover {
+  background-color: #00acee;
+  transition-duration: .3s;
+}
+/* linkdin*/
+.containerThree:hover {
+  background-color: #0072b1;
+  transition-duration: .3s;
+}
+/* Whatsapp*/
+.containerFour:hover {
+  background-color: #18b8a5;
+  transition-duration: .3s;
+}
+
+.socialContainer:active {
+  transform: scale(0.9);
+  transition-duration: .3s;
+}
+
+.socialSvg {
+  width: 17px;
+}
+
+.socialSvg path {
+  fill: rgb(255, 255, 255);
+}
+
+.socialContainer:hover .socialSvg {
+  animation: slide-in-top 0.3s both;
+}
+
+@keyframes slide-in-top {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
 
 /*responsive*/
 @media(max-width: 767px){
