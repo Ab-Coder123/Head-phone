@@ -445,6 +445,7 @@ ul {
   position: relative;
   padding-top: 5rem;
   padding-bottom: 2rem;
+
 }
 
 .head-Case .container .cont-Case {
@@ -452,6 +453,7 @@ ul {
   justify-content: space-around;
   align-items: center;
   gap: 200;
+
 }
 
 .head-Case .container .Case-img img {
@@ -493,6 +495,7 @@ ul {
   justify-content: space-between;
   align-items: center;  
   padding: 40px;
+  overflow: hidden;
 }
 
 .private .container .private-img img {
@@ -530,7 +533,7 @@ ul {
 .products .container {
   display: grid;
   grid-template-columns: repeat(3, 350px);
-  grid-template-rows: repeat(2, 350px);
+  grid-template-rows: repeat(3, 350px);
   gap: 10px;
   margin: auto 12%;
 }
